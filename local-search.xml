@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>java集合类</title>
+    <link href="/java-ji-he-lei/"/>
+    <url>/java-ji-he-lei/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p><img src="https://res.cloudinary.com/davg6ekyb/image/upload/v1658821530/zhaoxu%60s%20blog/2022/1fdd90964ee659bd3a1b83018d2c59bb.png" alt="集合"></p><h3 id="Set和List区别？"><a href="#Set和List区别？" class="headerlink" title="Set和List区别？"></a>Set和List区别？</h3><p><code>List</code>,<code>Set</code>都是继承自<code>Collection</code>接口。都是用来存储一组相同类型的元素的。</p><p><code>List</code>特点：元素有放入顺序，元素可重复 。</p><p><code>Set</code>特点：元素无放入顺序，元素不可重复。</p><h3 id="ArrayList和LinkedList和Vector的区别？"><a href="#ArrayList和LinkedList和Vector的区别？" class="headerlink" title="ArrayList和LinkedList和Vector的区别？"></a>ArrayList和LinkedList和Vector的区别？</h3><p>三者都实现了<code>List </code>接口，</p><p><code>ArrayList </code>是一个可改变大小的数组.当更多的元素加入到<code>ArrayList </code>中时,其大小将会动态地增长.内部的元素可以直接通过get与set方法进行访问。</p><p><code>Vector</code> 和<code>ArrayList </code>类似,但属于强同步类，多线程下安全。</p><p><code>LinkedList</code> 是一个双链表,在添加和删除元素时具有比<code>ArrayList </code>更好的性能.但在get与set方面弱于<code>ArrayList </code>.</p><p><code>Vector</code>和<code>ArrayList </code>在更多元素添加进来时会请求更大的空间。<code>Vector</code>每次请求其大小的双倍空间，而<code>ArrayList </code>每次对size增长50%。</p><p>而 <code>LinkedList </code>还实现了<code>Queue</code>接口,该接口比<code>List</code>提供了更多的方法,包括 offer(),peek(),poll()等。</p><h3 id="SynchronizedList和Vector的区别？"><a href="#SynchronizedList和Vector的区别？" class="headerlink" title="SynchronizedList和Vector的区别？"></a><code>SynchronizedList</code>和Vector的区别？</h3><p><code>Vector</code>是java.util包中的一个类。 <code>SynchronizedList</code>是java.util.Collections中的一个静态内部类。</p><p>在多线程的场景中可以直接使用<code>Vector</code>类，也可以使用Collections.SynchronizedList(List list)方法来返回一个线程安全的<code>List</code>。</p><p><code>Vector</code>使用同步方法实现，<code>SynchronizedList</code>使用同步代码块实现。 2.两者的扩充数组容量方式不一样（两者的add方法在扩容方面的差别也就是<code>ArrayList</code>和<code>Vector</code>的差别。）</p><p><code>SynchronizedList</code>中实现的类并没有都使用synchronized同步代码块。其中有listIterator和listIterator(int index)并没有做同步处理。</p><p><code>SynchronizedList</code>和<code>Vector</code>最主要的区别： </p><p>1.<code>SynchronizedList</code>有很好的扩展和兼容功能。他可以将所有的<code>List</code>的子类转成线程安全的类。</p><p>2.使用<code>SynchronizedList</code>的时候，进行遍历时要手动进行同步处理。 </p><p>3.<code>SynchronizedList</code>可以指定锁定的对象。</p><h3 id="Set如何保证元素不重复"><a href="#Set如何保证元素不重复" class="headerlink" title="Set如何保证元素不重复?"></a>Set如何保证元素不重复?</h3><p>在Java的Set体系中，根据实现方式不同主要分为两大类。<code>HashSet</code>和<code>TreeSet</code>。</p><p>1、<code>TreeSet </code>是二叉树实现的，<code>TreeSet</code>中的数据是自动排好序的，不允许放入 null值<br>2、<code>HashSet</code> 是哈希表实现的，<code>HashSet</code>中的数据是无序的，可以放入 null值，但只能放入一个null，两者中的值都不能重复，就如数据库中的唯一约束</p><p>在<code>HashSet</code>中，基本的操作都是由<code>HashMap</code>底层实现的，因为<code>HashSet</code>底层是用<code>HashMap</code>存储数据的。当向<code>HashSet</code>中添加元素的时候，首先计算元素的hashCode值，然后通过扰动计算和按位与的方式计算出这个元素的存储位置，如果这个位置为空，就将元素添加进去；如果不为空，则用equals方法比较元素是否相等，相等就不添加，否则找一个空位添加。</p><p><code>TreeSet</code>的底层是<code>TreeMap</code>的keySet()，而<code>TreeMap</code>是基于红黑树实现的，红黑树是一种平衡二叉查找树，它能保证任何一个节点的左右子树的高度差不会超过较矮的那棵的一倍。</p><p><code>TreeMap</code>是按key排序的，元素在插入<code>TreeSet</code>时compareTo()方法要被调用，所以<code>TreeSet</code>中的元素要实现<code>Comparable</code>接口。<code>TreeSet</code>作为一种Set，它不允许出现重复元素。<code>TreeSet</code>是用compareTo()来判断重复元素的。</p><h3 id="HashMap、HashTable、ConcurrentHashMap区别"><a href="#HashMap、HashTable、ConcurrentHashMap区别" class="headerlink" title="HashMap、HashTable、ConcurrentHashMap区别"></a>HashMap、HashTable、ConcurrentHashMap区别</h3><h4 id="HashMap和HashTable有何不同？"><a href="#HashMap和HashTable有何不同？" class="headerlink" title="HashMap和HashTable有何不同？"></a>HashMap和HashTable有何不同？</h4><p><strong>线程安全</strong>：<code>HashTable</code> 中的方法是同步的，而<code>HashMap</code>中的方法在默认情况下是非同步的。在多线程并发的环境下，可以直接使用<code>HashTable</code>，但是要使用<code>HashMap</code>的话就要自己增加同步处理了。</p><p><strong>继承关系</strong>： <code>HashTable</code>是基于陈旧的Dictionary类继承来的。 <code>HashMap</code>继承的抽象类AbstractMap实现了Map接口。</p><p><strong>允不允许null值</strong>： <code>HashTable</code>中，key和value都不允许出现null值，否则会抛出NullPointerException异常。 <code>HashMap</code>中，null可以作为键，这样的键只有一个；可以有一个或多个键所对应的值为null。</p><p><strong>默认初始容量和扩容机制</strong>： <code>HashTable</code>中的hash数组初始大小是11，增加的方式是 old*2+1。<code>HashMap</code>中hash数组的默认大小是16，而且一定是2的指数。</p><p><strong>哈希值的使用不同</strong> ： <code>HashTable</code>直接使用对象的hashCode。 <code>HashMap</code>重新计算hash值。</p><p><strong>遍历方式的内部实现上不同</strong> ： <code>HashTable</code>、<code>HashMap</code>都使用了 Iterator。而由于历史原因，<code>HashTable</code>还使用了Enumeration的方式 。 <code>HashMap</code> 实现 Iterator，支持fast-fail，<code>Hashtable</code>的 Iterator 遍历支持fast-fail，用 Enumeration 不支持 fast-fail。</p><h4 id="HashMap-和-ConcurrentHashMap-的区别？"><a href="#HashMap-和-ConcurrentHashMap-的区别？" class="headerlink" title="HashMap 和 ConcurrentHashMap 的区别？"></a>HashMap 和 ConcurrentHashMap 的区别？</h4><p><code>ConcurrentHashMap</code>和<code>HashMap</code>的实现方式不一样，虽然都是使用桶数组实现的，但是还是有区别，<code>ConcurrentHashMap</code>对桶数组进行了分段，而<code>HashMap</code>并没有。</p><p><code>ConcurrentHashMap</code>在每一个分段上都用锁进行了保护。<code>HashMap</code>没有锁机制。所以，前者线程安全的，后者不是线程安全的。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>java基础</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>leetcode算法题3</title>
     <link href="/leetcode-suan-fa-ti-3/"/>
     <url>/leetcode-suan-fa-ti-3/</url>
