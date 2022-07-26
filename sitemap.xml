@@ -2,34 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zhaoxublog.top/java-ji-he-lei/</loc>
-    
-    <lastmod>2022-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-2/</loc>
-    
-    <lastmod>2022-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-1/</loc>
-    
-    <lastmod>2022-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-3/</loc>
+    <loc>https://www.zhaoxublog.top/hashmap-xiang-jie/</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -47,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://www.zhaoxublog.top/my-first-page/</loc>
+    <loc>https://www.zhaoxublog.top/java-ji-he-lei/</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -57,6 +30,42 @@
   
   <url>
     <loc>https://www.zhaoxublog.top/java-zhong-de-ge-chong-guan-jian-zi/</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-1/</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-2/</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhaoxublog.top/leetcode-suan-fa-ti-3/</loc>
+    
+    <lastmod>2022-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zhaoxublog.top/my-first-page/</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -108,14 +117,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhaoxublog.top/tags/leetcode/</loc>
+    <loc>https://www.zhaoxublog.top/tags/java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhaoxublog.top/tags/java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://www.zhaoxublog.top/tags/leetcode/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -145,14 +154,14 @@
   </url>
   
   <url>
-    <loc>https://www.zhaoxublog.top/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://www.zhaoxublog.top/categories/java/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.zhaoxublog.top/categories/java/</loc>
+    <loc>https://www.zhaoxublog.top/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
