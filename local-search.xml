@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Leetcode算法题4</title>
+    <link href="/leetcode-suan-fa-ti-4/"/>
+    <url>/leetcode-suan-fa-ti-4/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="695-岛屿的最大面积"><a href="#695-岛屿的最大面积" class="headerlink" title="695. 岛屿的最大面积"></a><a href="https://leetcode.cn/problems/max-area-of-island/">695. 岛屿的最大面积</a></h2><p><strong>题目</strong>：给你一个大小为 m x n 的二进制矩阵 <code>grid</code>。</p><p>岛屿 是由一些相邻的 1 (代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在 水平或者竖直的四个方向上 相邻。你可以假设 <code>grid</code>的四个边缘都被 0（代表水）包围着。</p><p>岛屿的面积是岛上值为 1 的单元格的数目。</p><p>计算并返回 <code>grid</code>中最大的岛屿面积。如果没有岛屿，则返回面积为 0 。</p><p><img src="https://res.cloudinary.com/davg6ekyb/image/upload/v1658887229/zhaoxu%60s%20blog/2022/c462d022e77d90bc42de4f86e1ed4e9b.jpg" alt="img"></p><p><strong>示例</strong>：</p><blockquote><p>输入：grid &#x3D; [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]</p><p>输出：6</p></blockquote><p><strong>思路</strong>：贪心思想，双指针从两边往中间遍历数组，每次只移动值较小的指针，然后计算并保存最大的结果。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxArea</span><span class="hljs-params">(<span class="hljs-type">int</span>[] height)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">l</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>,r = height.length-<span class="hljs-number">1</span>,res = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(l&lt;=r)&#123;<br>        res = Math.max(res,Math.min(height[l],height[r])*(r-l));<br>        <span class="hljs-keyword">if</span>(height[l]&lt;height[r])&#123;<br>            l++;<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            r--;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HashMap详解</title>
     <link href="/hashmap-xiang-jie/"/>
     <url>/hashmap-xiang-jie/</url>
