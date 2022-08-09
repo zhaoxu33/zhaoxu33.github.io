@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>MySQL索引</title>
+    <link href="/mysql-suo-yin/"/>
+    <url>/mysql-suo-yin/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="索引基础"><a href="#索引基础" class="headerlink" title="索引基础"></a>索引基础</h2><p>索引是存储引擎用于快速查找记录的一种数据结构。</p><h3 id="索引的类型"><a href="#索引的类型" class="headerlink" title="索引的类型"></a>索引的类型</h3><h4 id="B-Tree索引"><a href="#B-Tree索引" class="headerlink" title="B-Tree索引"></a>B-Tree索引</h4><p><img src="https://res.cloudinary.com/davg6ekyb/image/upload/v1660014893/zhaoxu%60s%20blog/2022/2c705cda4ee24a0ef192522f26304556.png" alt="建立在B-Tree结构上索引"></p><p><strong>可以使用B-Tree索引的查询类型:</strong></p><p>B-Tree索引适用于全键值、键值范围或键前缀查找。其中键前缀查找只适用于根据最左前缀的查找。</p><p><strong>B-Tree索引的限制：</strong></p><ul><li>如果不是按照索引的最左列开始查找，则无法使用索引。</li><li>如果查询中有某个列的范围查询，则其右边所有列都无法使用索引优化查找。</li></ul><h4 id="哈希索引"><a href="#哈希索引" class="headerlink" title="哈希索引"></a>哈希索引</h4><p>哈希索引基于哈希表实现，只有精确匹配索引所有列的查询才有效。对于每一行数据，存储引擎都会对所有的索引列计算一个哈希码，哈希索引将所有的哈希码存储在索引中，同时在哈希表中保存指向每个数据行的指针。</p><p>哈希表的索引自身只存储对应的哈希值，所以索引的结构十分紧凑，这也让哈希索引查找的速度十分快，但也有其限制：</p><ul><li>哈希索引只包含哈希值和行指针，而不存储字段值，所以不能使用索引中的值来避免读取行。</li><li>哈希索引数据并不是按照索引值顺序存储的，所以也就无法用于排序。</li><li>哈希索引也不支持部分索引列匹配查找，因为哈希索引始终是使用索引列的全部内容来计算哈希值的。</li><li>哈希索引只支持等值比较查询，不支持任何范围查询。</li><li>访问哈希索引的数据非常快，除非有很多哈希冲突。当哈希冲突出现时，存储引擎必须遍历链表中所有的行指针，并逐行比较。</li><li>如果哈希冲突很多的话，一些索引维护操作的代价也会很高。</li></ul><p>在MySQL中，只有Memory引擎显示支持哈希索引。这是其默认索引类型，同时其也支持B-Tree索引。同时它还支持非唯一哈希索引，如果多个列哈希值相同，索引会以链表的方式存放多个记录指针到同一个哈希条目中。InnoDB引擎中有一个特殊的功能叫做“自适应哈希索引”。当InnoDB注意到某些索引值被使用的非常频繁时，它会在内存中基于B-Tree索引之上再创建一个哈希索引。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MySQL锁问题</title>
     <link href="/mysql-suo-wen-ti/"/>
     <url>/mysql-suo-wen-ti/</url>
